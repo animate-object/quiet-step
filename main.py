@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from argparse import ArgumentParser
-from silent import generate
+from quiet import generate
 
 def main():
     parser = ArgumentParser()
@@ -12,7 +12,6 @@ def main():
     with open(file_path, "r") as f:
         gpx_string = f.read()
 
-    # get filename from fully specified path string
     file_name = file_path.split("/")[-1]
 
     generate(gpx_string, filename=file_name)
